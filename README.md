@@ -7,5 +7,6 @@
 * 將Setting.py中的CUB_FOLDER_PATH 設為您下載CUB200-2011，所放置的位置
 * 如果您要測試，請將Probability.ipynb中 Detector所載入模型的位置修改成您訓練模型的位置
 ## Training
+* 由於模型為40MB，因此不方便上傳
 * 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的地方
 ## Testing
