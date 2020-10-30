@@ -17,4 +17,4 @@
 |IoU>0.5|bbox|body|head|
 |----------|----|-----|----|
 |with Mask||||
-|No Mask||||
+|No Mask|||0.321/0.29|
