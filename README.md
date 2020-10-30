@@ -1,4 +1,4 @@
-# Part-Localization-by-Hypercolumn
+# Part-Localization-by-Hypercolumn-plus-SCDA
 
 ## Requirement
 * 資料集CUB200-2011，請到[此處](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)下載
