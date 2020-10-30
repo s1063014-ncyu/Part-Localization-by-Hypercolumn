@@ -12,8 +12,8 @@
 ## Testing
  ##RESULT
  
-|----------|bbox|body|head|
+||bbox|body|head|
+|----------|----|-----|----|
+|with Mask||||
 |||||
-|with Mask|----|----|----|
-|||||
-|No Mask|----|----|----|
+|No Mask||||
