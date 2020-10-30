@@ -11,6 +11,6 @@
 * 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的地方
 ## Testing
  ##RESULT
- | bbox|body|head|
- |----|----|----|
- ||||
+ |          | bbox|body|head|
+ | with Mask|----|----|----|
+ | No Mask  ||||
