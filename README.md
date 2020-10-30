@@ -14,7 +14,7 @@
  
  * TITAN RTX
  
-|IoU>0.5|bbox|body|head|
+|IoU>0.5 (%/s)|bbox|body|head|
 |----------|----|-----|----|
 |with Mask|0.745/0.34|||
 |No Mask|||0.321/0.29|
