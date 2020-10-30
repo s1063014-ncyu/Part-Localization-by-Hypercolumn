@@ -10,3 +10,10 @@
 * 由於模型為40MB，因此不方便上傳
 * 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的地方
 ## Testing
+* 將Probability.ipynb打開並執行
+## RESULT
+ 
+|IoU>0.5|bbox|body|head|
+|----------|----|-----|----|
+|with Mask||||
+|No Mask||||
