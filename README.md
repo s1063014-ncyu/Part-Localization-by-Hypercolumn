@@ -12,6 +12,8 @@
 ## Testing
  ## RESULT
  
+ * TITAN RTX
+ 
 |IoU>0.5|bbox|body|head|
 |----------|----|-----|----|
 |with Mask||||
