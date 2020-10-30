@@ -12,7 +12,7 @@
 ## Testing
  ## RESULT
  
-|IoU|bbox|body|head|
+|IoU>0.5|bbox|body|head|
 |----------|----|-----|----|
 |with Mask||||
 |No Mask||||
