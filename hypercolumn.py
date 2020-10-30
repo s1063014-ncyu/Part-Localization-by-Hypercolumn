@@ -45,9 +45,9 @@ class hypercolumn():
         #self.model.summary()
         
         #選擇提取特徵的層
-        #layers_extract = [1,2,4,5,7,8,9,10,12,13,14,15,17,18,19,20] #19 Full
+        layers_extract = [1,2,4,5,7,8,9,10,12,13,14,15,17,18,19,20] #19 Full
         #layers_extract = [1,2,4,5,7,8,9,11,12,13,15,16,17]#16
-        layers_extract = [3,11,19] #19 
+        #layers_extract = [3,11,19] #19 
         #layers_extract2 = [22]
         #layers_extract = [19,20]
         #layers_extract = [6,41,87,155,189] #ResNet50V2 -2
@@ -80,12 +80,15 @@ class hypercolumn():
         for convmap in feature_maps:
             conv_out = convmap[0, :, :, :]
             feat_map = conv_out.transpose((2,0,1))
-            '''
+            
             mean = np.mean(feat_map)
             average = np.average(feat_map, axis=0)
             A = (average>mean)
+            plt.imshow(A)
+            plt.show()
             A = average * A
             upscaled =resize(A, (self.feature_size, self.feature_size), mode='constant', preserve_range=True)
+            
             hypercolumns.append(upscaled)
             '''
             i=0
@@ -94,7 +97,7 @@ class hypercolumn():
                 if (i%10==0):
                     upscaled =resize(fmap, (self.feature_size, self.feature_size), mode='constant', preserve_range=True)
                     hypercolumns.append(upscaled)
-            
+            '''
         print('疊加特徵圖耗時:', (dt.now() - start))
         
         return np.asarray(hypercolumns)
