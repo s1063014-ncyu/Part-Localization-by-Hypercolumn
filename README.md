@@ -13,7 +13,7 @@
 * 將Probability.ipynb打開並執行
 ## RESULT
  
-|IoU>0.5(%/)|bbox|body|head|
+|IoU>0.5 (%/s)|bbox|body|head|
 |----------|----|-----|----|
 |with Mask||||
 |增加訓練的資料|||0.644/0.25|
