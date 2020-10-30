@@ -8,7 +8,8 @@
 * 如果您要測試，請將Probability.ipynb中 Detector所載入模型的位置修改成您訓練模型的位置
 ## Training
 * 由於模型為40MB，因此不方便上傳
-* 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的地方
+* 可以到hypercolumn.py中選擇hypercolum要提取哪些層(越多準確度越高)
+* 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的部位(head,body,bbox)
 ## Testing
 * 將Probability.ipynb打開並執行
 ## RESULT
