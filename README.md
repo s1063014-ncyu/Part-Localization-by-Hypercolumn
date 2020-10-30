@@ -10,7 +10,7 @@
 * 由於模型為40MB，因此不方便上傳
 * 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的地方
 ## Testing
- ##RESULT
+ ## RESULT
  
 ||bbox|body|head|
 |----------|----|-----|----|
