@@ -48,17 +48,6 @@ class hypercolumn():
         #layers_extract = [1,2,4,5,7,8,9,10,12,13,14,15,17,18,19,20] #19 Full
         #layers_extract = [1,2,4,5,7,8,9,11,12,13,15,16,17]#16
         layers_extract = [3,11,19] #19 
-        #layers_extract2 = [22]
-        #layers_extract = [19,20]
-        #layers_extract = [6,41,87,155,189] #ResNet50V2 -2
-        #layers_extract = [6,36,82,150,185] #ResNet50V2 -3
-        #layers_extract = [189] #ResNet50V2 -4
-        
-        #layers_extract = [3,6,14,24,34,44,64,84,104,131] #Xception -2
-        #layers_extract = [24,44,64,84,104,131] #Xception -3
-        
-        #layers_extract = [40,258,592,777] #InceptionResNetV2-1
-        #layers_extract = [777] #InceptionResNetV2-2
         
         layers = [self.model.layers[li].output for li in layers_extract]
         
@@ -80,14 +69,6 @@ class hypercolumn():
         for convmap in feature_maps:
             conv_out = convmap[0, :, :, :]
             feat_map = conv_out.transpose((2,0,1))
-            '''
-            mean = np.mean(feat_map)
-            average = np.average(feat_map, axis=0)
-            A = (average>mean)
-            A = average * A
-            upscaled =resize(A, (self.feature_size, self.feature_size), mode='constant', preserve_range=True)
-            hypercolumns.append(upscaled)
-            '''
             i=0
             for fmap in feat_map: 
                 i =i+1
@@ -151,15 +132,9 @@ class hypercolumn():
         negative_points = geometry_utils.Box.filter_points(negative_points, part_box,img_gray)
         
         start = dt.now()
-        #mat_img = self.Matting.Matting(img_origin,img_gray)
-        #print('Possion Matting耗時:', (dt.now() - start))
+        mat_img = self.Matting.Matting(img_origin,img_gray)
+        print('Possion Matting耗時:', (dt.now() - start))
         
         negative_points, positive_points = geometry_utils.Box.filter_points_negtive(negative_points, positive_points, img_gray)
         
-        '''
-        plt.scatter(*zip(*negative_points), color='r', alpha=0.6, lw=0)
-        plt.scatter(*zip(*positive_points), color='b', alpha=0.6, lw=0)
-        plt.savefig('point.png')#儲存圖片
-        plt.show()
-        '''
         return self.features(positive_points), self.features(negative_points)
