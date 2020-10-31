@@ -7,5 +7,5 @@ GPU_MODE = False
 CUB_FOLDER_PATH = '/workspace/DataSet/CUB_200_2011/CUB_200_2011'
 
 # Algorithm Settings
-POISSON_PART_RADIUS = {'head': 15, 'body': 30, 'bbox':40,'Fish head': 15}
+POISSON_PART_RADIUS = {'head': 15, 'body': 30, 'bbox':40}
 POISSON_NEGATIVE_RADIUS = 40
