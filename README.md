@@ -12,10 +12,3 @@
 * 將CreatModel.ipynb打開並執行，可以在裡面選擇想訓練的部位(head,body,bbox)
 ## Testing
 * 將Probability.ipynb打開並執行
-## RESULT
- * TITAN RTX
- 
-|IoU>0.5 (%/s)|bbox|body|head|
-|----------|----|-----|----|
-|3、11、19|0.44/0.2|0.43/0.21|0.54/0.2|
-|增加訓練的資料|0.83/0.23|0.59/0.21|0.644/0.25|
